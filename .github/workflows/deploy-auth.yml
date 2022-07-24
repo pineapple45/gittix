@@ -20,6 +20,6 @@ jobs:
       - run: docker push 333456/auth
       - uses: digitalocean/action-doctl@v2
         with:
-          token: $ {{ secrets.DIGITALOCEAN_ACCESS_TOKEN}}
-      - run: doctl kubernetes cluster kubeconfig save gittix fg # create a context for digital ocean cluster
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - run: doctl kubernetes cluster kubeconfig save gittix # create a context for digital ocean cluster
       - run: kubectl rollout restart deployment auth-depl
