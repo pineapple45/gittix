@@ -1,4 +1,4 @@
-name: deply-auth
+name: deploy-auth
 
 on:
   push:
@@ -17,4 +17,4 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      - RUN: docker push 333456/auth
+      - run: docker push 333456/auth
