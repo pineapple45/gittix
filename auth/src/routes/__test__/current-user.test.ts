@@ -8,10 +8,9 @@ it('responds with details about the user', async () => {
     .set('Cookie', cookie)
     .send()
     /**
-     * Initially expectation was *200* but now to make the
-     * the test fail... we change it to *400*
+     * We correct the test and now we expect 200!!
      */
-    .expect(400);
+    .expect(200);
 
   expect(response.body.currentUser.email).toEqual('test@test.com');
 });
