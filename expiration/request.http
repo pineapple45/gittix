@@ -1,0 +1,66 @@
+GET http://gittix.dev/sasdadas
+
+### Sign Up Handler
+POST https://gittix.dev/api/users/signup
+Content-Type: application/json
+
+{
+    "email":"test@test.com",
+    "password":"password"
+}
+
+### Sign In Handler 
+POST https://gittix.dev/api/users/signin
+Content-Type: application/json
+
+{
+    "email":"test@test.com",
+    "password":"password"
+}
+
+### Get Current User
+GET https://gittix.dev/api/users/currentuser
+
+### Sign Out Handler
+POST https://gittix.dev/api/users/signout
+Content-Type: application/json
+
+
+### Create a new ticket
+POST  https://gittix.dev/api/tickets/
+Content-Type: application/json
+Cookie: session=eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJall5WkRKaU1EQTBZMkptWWpKbVlUYzRaVEpqWVdGa1l5SXNJbVZ0WVdsc0lqb2lkR1Z6ZEVCMFpYTjBMbU52YlNJc0ltbGhkQ0k2TVRZMU56azNOVEEyT1gwLm1RbFF3NmFWTERDdmJmeGxGTHhzOWdBekZmOWVjSFo5VzhjaTYtOFh0MlUifQ
+
+{
+    "title":"ticket 7",
+    "price": 77
+}
+
+### View all tickets
+GET  https://gittix.dev/api/tickets/
+Content-Type: application/json
+
+### View single ticket
+GET  https://gittix.dev/api/tickets/61ef7c2f9c2164acc0e38c5c
+Content-Type: application/json
+
+
+### Update a ticket
+PUT  http://gittix.dev/api/tickets/62c6bf68fe7cb683ee97c89d
+Content-Type: application/json
+Cookie: session=eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJall5WkRKaU1EQTBZMkptWWpKbVlUYzRaVEpqWVdGa1l5SXNJbVZ0WVdsc0lqb2lkR1Z6ZEVCMFpYTjBMbU52YlNJc0ltbGhkQ0k2TVRZMU56azNORGM0T0gwLmVBT2RqU2lkUl9aWGF2TTgteGlDd0Q5N3JfeW5jVHZWYUVKZmItd1M0ZGsifQ
+
+{
+    "title":"ticket updated",
+    "price": 30
+}
+
+
+### Create a new order
+POST  http://gittix.dev/api/orders/
+Content-Type: application/json
+Cookie: session=eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJall5WkRKaU1EQTBZMkptWWpKbVlUYzRaVEpqWVdGa1l5SXNJbVZ0WVdsc0lqb2lkR1Z6ZEVCMFpYTjBMbU52YlNJc0ltbGhkQ0k2TVRZMU56azNORGM0T0gwLmVBT2RqU2lkUl9aWGF2TTgteGlDd0Q5N3JfeW5jVHZWYUVKZmItd1M0ZGsifQ
+
+{
+    "ticketId":"62d2f4ff43c15e891d97387f"
+}

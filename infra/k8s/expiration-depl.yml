@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expiration-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: expiration
+  template:
+    metadata:
+      labels:
+        app: expiration
+    spec:
+      containers:
+        - name: expiration
+          image: 333456/expiration
+          env:
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NATS_CLUSTER_ID
+              value: gittix
+            - name: NATS_URL
+              value: 'http://nats-srv:4222'
+            - name: REDIS_HOST
+              value: expiration-redis-srv
+# We don't need a cluster IP service here because no other service
+# will be directly interacting with the expiration service

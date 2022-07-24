@@ -1,0 +1,28 @@
+### Create a new ticket
+POST  http://gittix.dev/api/tickets/
+Content-Type: application/json
+Cookie: session=eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJall4WlRVNFpXRmlZV0U1WkdJME9EaGpPV0ppTVRKa01TSXNJbVZ0WVdsc0lqb2lkR1Z6ZEVCMFpYTjBMbU52YlNJc0ltbGhkQ0k2TVRZME1qUXpOREkwTTMwLi1tQmpYNVVlempPaW9laUJGd084QVZPdWNCUHlzU3F1NUJ3VEZCeGRnRWcifQ
+
+{
+    "title":"ticket 1",
+    "price": 10
+}
+
+### View all tickets
+GET  http://gittix.dev/api/tickets/
+Content-Type: application/json
+
+### View single ticket
+GET  http://gittix.dev/api/tickets/61ef7c2f9c2164acc0e38c5c
+Content-Type: application/json
+
+
+### Update a ticket
+PUT  http://gittix.dev/api/tickets/62c6bf68fe7cb683ee97c89d
+Content-Type: application/json
+Cookie: session=eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJall4WlRVNFpXRmlZV0U1WkdJME9EaGpPV0ppTVRKa01TSXNJbVZ0WVdsc0lqb2lkR1Z6ZEVCMFpYTjBMbU52YlNJc0ltbGhkQ0k2TVRZME1qUXpOREkwTTMwLi1tQmpYNVVlempPaW9laUJGd084QVZPdWNCUHlzU3F1NUJ3VEZCeGRnRWcifQ
+
+{
+    "title":"ticket updated",
+    "price": 30
+}
