@@ -4,6 +4,7 @@ deploy:
   kubectl:
     manifests:
       - ./infra/k8s/*
+      - ./infra/k8s-dev/* # We add k8s-dev folder here
 build:
   local:
     push: false
