@@ -1,0 +1,14 @@
+name: tests-tickets
+
+on:
+  push:
+  pull_request:
+    paths:
+      - 'tickets/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd tickets && yarn && yarn test:ci

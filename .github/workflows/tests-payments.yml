@@ -1,0 +1,16 @@
+name: tests-payments
+
+on:
+  push:
+  pull_request:
+    paths:
+      - 'payments/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd payments && yarn && yarn test:ci
+        env:
+          STRIPE_KEY: ${{secrets.STRIPE_KEY}}
