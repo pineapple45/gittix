@@ -15,7 +15,8 @@ app.use(express.json());
 app.use(
   cookieSession({
     signed: false, // cookies will not be encrypted
-    secure: process.env.NODE_ENV !== 'test', // cookies will be provided only on https connection
+    // secure: process.env.NODE_ENV !== 'test', // cookies will be provided only on https connection
+    secure: false,
   })
 );
 
