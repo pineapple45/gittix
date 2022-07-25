@@ -14,7 +14,7 @@ const buildClient = ({ req }) => {
     // We must be on the browser
     return axios.create({
       baseUrl: '/',
-      headers: req.headers,
+      // client automatically attaches the headers
     });
   }
 };
