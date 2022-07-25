@@ -12,7 +12,7 @@ const buildClient = ({ req }) => {
   } else {
     // We must be on the browser
     return axios.create({
-      baseUrl: 'www.gittix-app-micro.xyz/',
+      baseUrl: 'http://www.gittix-app-micro.xyz/',
       headers: req.headers,
     });
   }
